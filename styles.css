@@ -64,7 +64,7 @@ a:hover {
 /* Hero Section  */
 
 #hero {
-  background-image: url(images/BC\ Image.jpg);
+  background-image: url(./images/BC\ Image.jpg);
   background-attachment: fixed;
   background-blend-mode: multiply;
   background-repeat: none;
