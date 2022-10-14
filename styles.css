@@ -19,6 +19,7 @@ header {
   grid-template-columns: 1fr 3fr;
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .logo {
@@ -478,11 +479,9 @@ ________________________________________________________________________________
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    "h h h"
+    /* "h h h" */
     "sd sd sd"
-    "s1s s1s sb"
-    "s3b2 s2s s2s"
-    "s3s s3s s3s"
+    "s1s s2s s3s"
     "oc oc oc"
     "ft ft ft";
   gap: 5px;
@@ -495,7 +494,7 @@ ________________________________________________________________________________
   background-repeat: none;
   background-size: contain;
   background-attachment: fixed;
-  
+  height: 600px;
 }
 
 .hs-content {
@@ -551,7 +550,6 @@ ________________________________________________________________________________
 
 #main-grid-s h2 {
   font-size: 40px;
-  color: white;
 }
 
 #section1s {
@@ -564,15 +562,28 @@ ________________________________________________________________________________
 
 .service-descr {
   grid-area: sd;
-  min-height: 300px;
-  background: rgb(255, 255, 255);
+  min-height: 500px;
+  background: rgb(0, 0, 0);
+  background-image: url(/images/services\ background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   margin: auto;
   padding-bottom: 50px;
+  text-align: left;
+  padding-top: 50px;
+  color: black;
+}
+
+.service-descr img {
+  max-width: 500px;
+  float: left;
+  padding: 50px;
 }
 
 .service-descr p {
   padding: 30px;
-  font-size: 20px;
+  font-size: 18px;
   width: 80%;
   margin: auto;
   text-align: left;
@@ -582,46 +593,28 @@ ________________________________________________________________________________
   font-size: 40px;
   padding: 0px 30px 0px 30px;
   margin: auto;
-  text-align: center;
+  text-align: left;
+  color: black;
 }
 
 .company-description {
-  display: block;
-  max-width: 90%;
-  min-height: 350px;
-  border-radius: 0 0px 100px 0;
-  font-size: 18px;
-  padding-top: 20px;
-  padding-left: 25px;
-  color: rgb(255, 255, 255);
-  background: rgba(0, 0, 0, 0.61);
+  color: white;
 }
 
 #section2s {
-  background: rgba(14, 12, 12, 0.717);
-  background-image: url(/images/Domain-Registration.png);
-  background-blend-mode: multiply;
-  grid-area: s2s;
-  border-radius: ;
-}
-
-#section3sb2 {
   background: rgb(0, 0, 0);
-  grid-area: s3b2;
-  color: white;
-  padding: 50px 0px 10px 30px;
-  border-radius: px;
+  grid-area: s2s;
+  margin: 40px;
+  padding: 20px;
+  border-radius: 40px;
 }
 
 #section3s {
-  background: rgb(7, 50, 6);
+  background: rgb(0, 0, 0);
   grid-area: s3s;
   margin: 40px;
   padding: 20px;
   border-radius: 40px;
-  width: 80%;
-  margin: auto;
-  background-image: url(/images/email-service.jpg);
 }
 
 #section3sb {
@@ -630,21 +623,6 @@ ________________________________________________________________________________
   margin: 40px;
   padding: 20px;
   border-radius: 40px;
-}
-
-#section3sb ul li {
-  list-style: circle;
-  color: black;
-  display: list-item;
-  line-height: 2;
-  font-family: "Lucida Sans";
-}
-
-#section3sb2 ul li {
-  list-style: circle;
-  color: rgb(255, 255, 255);
-  display: list-item;
-  line-height: 2;
 }
 
 #our-clients {
@@ -666,7 +644,7 @@ ________________________________________________________________________________
 
 .logo-images {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   color: white;
   gap: 10px;
   padding-left: 5px;
@@ -745,17 +723,45 @@ section.our-profile {
   text-align: center;
 }
 
-.grid-span0 h2 {
-  text-align: left;
+.grid-span0 {
+  background: black;
+  height: 300px;
 }
-.grid-span0 p {
-  text-align: left;
+
+.c-btn {
+  padding: 6px;
+  width: 220px;
+  font-size: 22px;
+  border-radius: 25px;
+  background: none;
+  color: white;
+}
+
+.c-btn:hover {
+  cursor: pointer;
+  padding: 6px;
+  width: 220px;
+  font-size: 22px;
+  border-radius: 25px;
+
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+}
+
+.grid-span0 h2 {
+  text-align: center;
 }
 
 .motto:nth-child(1) {
   grid-area: tagline;
   padding-top: 50px;
-  background: white;
+  background: rgb(0, 0, 0);
+  color: white;
+}
+
+.motto:nth-child(1) {
+  text-align: center;
+  font-size: 50px;
 }
 
 .container-msg {
@@ -782,6 +788,9 @@ section.our-profile {
   grid-area: mission;
   min-height: 350px;
   padding-top: 30px;
+  /* background-image: url(/images/Anti\ Virus.png);
+  background-repeat: no-repeat;
+  background-position: fixed; */
 }
 
 .motto:nth-child(3) {
@@ -801,7 +810,6 @@ section.our-profile {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 20px 60px 0px 80px;
   gap: 20px;
-  background-image: url(/images/email-service.jpg);
   height: 400px;
   padding: 50px;
 }
@@ -868,6 +876,23 @@ section.our-profile {
   box-shadow: 9px 7px 12px 0px rgba(0, 0, 0, 0.466);
 }
 
+.contentT h3 {
+  font-size: 29px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.contentT h4 {
+  font-size: 25px;
+  color: white;
+}
+.contentT p {
+  font-size: 14px;
+  color: white;
+  width: 80%;
+  margin: auto;
+}
+
 .contentT:hover {
   background: rgb(0, 0, 0);
   padding-top: 20px;
@@ -880,9 +905,13 @@ section.our-profile {
 }
 
 .contentT img {
-  max-width: 120px;
+  max-width: 180px;
   margin-top: -70px;
-  border-radius: 100%;
+  border-radius: 30%;
+}
+
+.grid-span3 h2 {
+  font-size: 55px;
 }
 
 .motto:nth-child(5) {
@@ -1016,6 +1045,13 @@ input {
   border: 1px solid black;
 }
 
+#t-area{
+  border-radius: 30px;
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
 #sendBtn {
   margin-top: 20px;
   border: 2px solid blue;
@@ -1060,7 +1096,6 @@ input {
     grid-template-areas:
       "logo logo logo"
       "nav nav nav";
-    /* position: fixed; */
     padding-bottom: 15px;
     width: 100%;
   }
