@@ -286,6 +286,43 @@ ol {
   cursor: pointer;
 }
 
+.info-sec {
+  background: black;
+  color: white;
+  font-family: sans-serif;
+
+  margin: auto;
+  padding: 30px;
+}
+
+.info-sec p {
+  font-size: 16px;
+}
+
+.info-sec h2 {
+  font-size: 45px;
+}
+
+.btn-gs1 {
+  font-size: 18px;
+  border-radius: 25px;
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.btn-gs1:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+  cursor: pointer;
+  border: 1px solid white;
+}
+
 /* Info Box  */
 
 #cms-info {
@@ -479,7 +516,7 @@ ________________________________________________________________________________
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    /* "h h h" */
+    "h h h"
     "sd sd sd"
     "s1s s2s s3s"
     "oc oc oc"
@@ -872,7 +909,7 @@ section.our-profile {
   background: rgb(28, 118, 254);
   padding-top: 20px;
   padding-bottom: 20px;
-  min-height: 290px;
+  min-height: 320px;
   box-shadow: 9px 7px 12px 0px rgba(0, 0, 0, 0.466);
 }
 
@@ -1003,7 +1040,7 @@ section.our-profile {
 }
 
 #cu-main p {
-  width: 60%;
+  width: 50%;
   color: white;
   padding-left: 45px;
   font-size: 20px;
@@ -1045,11 +1082,12 @@ input {
   border: 1px solid black;
 }
 
-#t-area{
+#t-area {
   border-radius: 30px;
   padding: 10px;
   text-transform: capitalize;
   font-size: 16px;
+  max-width: 400px;
 }
 
 #sendBtn {
@@ -1209,6 +1247,64 @@ input {
     padding: 10px;
     margin: 20px auto 20px auto;
   }
+
+  .s-bar {
+    width: auto;
+    border: none;
+  }
+
+  .search-input {
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    width: 60%;
+    border: 2px solid;
+    text-align: left;
+    height: 40px;
+  }
+
+  .s-btn {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .b-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: auto;
+  }
+
+  .submission-form {
+    width: 50%;
+    padding: 10px;
+    margin: 50px auto;
+  }
+  
+    .s-bar {
+    width: auto;
+    border: none;
+  }
+
+  .search-input {
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+    width: 40%;
+    border: 2px solid;
+    text-align: left;
+    height: 40px;
+  }
+
+  .s-btn {
+    margin-top: 10px;
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1265,16 +1361,29 @@ input {
     font-size: 20px;
   }
 
+  .s-bar {
+    width: auto;
+    border: none;
+  }
+
   .search-input {
     text-align: center;
-    display: block;
+    display: inline-block;
     margin: auto;
     width: 60%;
+    border: 2px solid;
   }
 
   .s-btn {
     margin-top: 10px;
     font-size: 20px;
+  }
+  .cmsTittle h1 {
+    font-size: 40px;
+  }
+
+  .cmsBtn {
+    margin-bottom: 50px;
   }
 
   .domain-price {
@@ -1326,193 +1435,69 @@ input {
     width: 100%;
     margin: 10px;
   }
+
+  #t-area {
+    width: 100%;
+  }
+
+  footer {
+    display: block;
+  }
 }
 
 /* Services Page Media Queries */
 
-/* Bout Us Media Queries  */
-
-/* @media (max-width: 768px) {
-} */
-
 @media (max-width: 768px) {
-  #services-hero {
-    width: 100%;
-  }
-
-  .our-profile {
-    display: grid;
-    gap: 20px;
-    grid-template-areas:
-      "tagline"
-      "mission"
-      "vision"
-      "objectives ";
-  }
-
-  /* .our-profile {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 50% 50%;
-    grid-template-areas:
-      "tagline tagline"
-      "mission mission"
-      "vision vision"
-      "objectives objectives ";
-  } */
-
-  #servicescontainer {
-    background: rgb(0, 0, 0);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "sec1"
-      "sec2"
-      "sec3"
-      "sec2k";
-    color: white;
-    text-align: center;
-    padding: 20px;
-    gap: 40px;
-    width: 100%;
-    margin: auto;
-  }
-
-  .pic-mix {
-    display: none;
-  }
-  .service-1 {
-    grid-area: sec1;
-    min-height: 200px;
-    padding-top: 50px;
-    width: 80%;
-    margin: auto;
-    background: rgb(209, 33, 33);
-    padding: 20px;
-    border-radius: 35px;
-  }
-
-  .service-2 {
-    grid-area: sec2;
-    min-height: 200px;
-    padding-top: 50px;
-    width: 80%;
-    margin: auto;
-    background: rgb(206, 206, 206);
-    padding: 20px;
-    border-radius: 35px;
-  }
-
-  .service-2k img {
-    display: none;
-  }
-
-  .service-2k {
-    grid-area: sec2k;
-    min-height: 200px;
-    padding-top: 50px;
-    width: 80%;
-    margin: auto;
-    background: rgb(206, 206, 206);
-    padding: 20px;
-    border-radius: 35px;
-  }
-
-  .service-3 {
-    grid-area: sec3;
-    min-height: 200px;
-    padding-top: 50px;
-    width: 80%;
-    margin: auto;
-    background: rgb(209, 33, 33);
-    padding: 20px;
-    border-radius: 35px;
-  }
-}
-
-@media (max-width: 480px) {
-  .our-profile {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 100%;
-    grid-template-areas:
-      "tagline"
-      "mission"
-      "vision"
-      "objectives ";
-  }
-
-  #servicescontainer {
-    background: rgb(0, 0, 0);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "sec1"
-      "sec2"
-      "sec3"
-      "sec2k";
-    color: white;
-    text-align: center;
-    padding: 20px;
-    gap: 40px;
-    width: 100%;
-    margin: auto;
-  }
-
-  .pic-mix {
-    display: none;
-  }
-  .service-1 {
-    grid-area: sec1;
-    min-height: 200px;
-    padding-top: 50px;
-    background: rgb(209, 33, 33);
-  }
-
-  .service-2 {
-    grid-area: sec2;
-    min-height: 200px;
-    padding-top: 50px;
-    background: rgb(206, 206, 206);
-  }
-
-  .service-2k {
-    grid-area: sec2k;
-    min-height: 200px;
-    padding-top: 50px;
-    background: rgb(206, 206, 206);
-  }
-
-  .service-3 {
-    grid-area: sec3;
-    min-height: 200px;
-    padding-top: 50px;
-    background: rgb(209, 33, 33);
-  }
-}
-
-/* Services Media Queries  */
-
-@media (max-width: 480px) {
   #main-grid-s {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100vh 500px 400px 400px 400px 80px;
+    grid-template-columns: 1fr;
     grid-template-areas:
       "h "
+      "sd"
       "s1s "
-      "s2s "
-      "s3s "
-      "sb"
-      "oc"
-      "ft";
-
-    gap: 5px;
+      "s2s"
+      "s3s"
+      "oc "
+      "ft ";
   }
 
-  .f-widgets {
-    grid-area: footer;
+  .hs-content {
+    grid-template-columns: 1fr;
   }
+
+  .hs-h1 {
+    width: 100%;
+    font-size: 40px;
+    padding-top: 120px;
+    text-align: center;
+  }
+
+  .service-descr {
+    grid-area: sd;
+    min-height: 500px;
+    background: rgb(0, 0, 0);
+    background-position: center;
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: left;
+    padding-top: 50px;
+    color: rgb(255, 243, 243);
+    width: 100%;
+  }
+
+  .service-descr img {
+    margin: auto;
+    padding: 10px;
+    max-width: 410px;
+  }
+  .service-descr h2 {
+    color: white;
+  }
+
+  .service-descr p {
+    font-size: 15px;
+    width: 100%;
+  }
+
   .hs-img-m {
     display: none;
   }
@@ -1521,11 +1506,321 @@ input {
     grid-area: oc;
   }
 
-  footer {
+  .logo-images {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #hero-s {
+    width: 100%;
+  }
+
+  #hero-s h1 {
+    font-size: 40px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #main-grid-s {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h "
+      "sd"
+      "s1s "
+      "s2s"
+      "s3s"
+      "oc "
+      "ft ";
+  }
+
+  .hs-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hs-h1 {
+    width: 100%;
+    font-size: 40px;
+    padding-top: 120px;
+    text-align: center;
+  }
+
+  .service-descr {
+    grid-area: sd;
+    min-height: 500px;
+    background: rgb(0, 0, 0);
+    background-position: center;
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: left;
+    padding-top: 50px;
+    color: rgb(255, 243, 243);
+    width: 100%;
+  }
+
+  .service-descr img {
+    margin: auto;
+    padding: 10px;
+    max-width: 410px;
+  }
+  .service-descr h2 {
+    color: white;
+  }
+
+  .service-descr p {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .hs-img-m {
     display: none;
+  }
+
+  #our-clients {
+    grid-area: oc;
   }
 
   .logo-images {
     grid-template-columns: 1fr;
+  }
+
+  #hero-s {
+    width: 100%;
+  }
+
+  #hero-s h1 {
+    font-size: 40px;
+    width: 100%;
+  }
+}
+
+/* ABout Us Media Queries  */
+
+@media (max-width: 768px) {
+  .our-profile {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    grid-template-areas:
+      "mission "
+      "vision "
+      "sd "
+      "objectives "
+      "tagline ";
+  }
+
+  #about-hero {
+    width: 100%;
+  }
+
+  #about-hero p {
+    width: 100%;
+  }
+
+  .container-msg {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 60px 0px 80px;
+    gap: 30px;
+  }
+
+  .container-msgT {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 60px 0px 80px;
+    gap: 30px;
+    height: 1400px;
+  }
+  .short-des {
+    grid-template-columns: 1fr;
+  }
+
+  .short-des img {
+    max-width: 250px;
+  }
+
+  .grid-span2 h3 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-profile {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    grid-template-areas:
+      "mission "
+      "vision "
+      "sd "
+      "objectives "
+      "tagline ";
+  }
+
+  #about-hero {
+    width: 100%;
+  }
+
+  #about-hero p {
+    width: 100%;
+  }
+
+  .container-msg {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 60px 0px 80px;
+    gap: 30px;
+  }
+
+  .grid-span2 h3 {
+    text-align: center;
+  }
+
+  .container-msgT {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 60px 0px 80px;
+    gap: 30px;
+    height: 1400px;
+  }
+
+  .grid-span0 {
+    min-height: 400px;
+  }
+}
+
+/* Services Media Queries________________________________________________________________________________________________  */
+
+@media (max-width: 480px) {
+  * {
+    box-sizing: border-box;
+  }
+  #services-hero {
+    width: 100%;
+  }
+
+  #services-hero {
+    width: 100%;
+  }
+
+  .our-profile {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  #about-hero {
+    width: 100%;
+  }
+
+  #about-hero p {
+    width: 100%;
+  }
+
+  .container-msgT {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 60px 0px 80px;
+    gap: 30px;
+  }
+
+  .our-profile {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-areas:
+      "mission "
+      "vision "
+      "sd "
+      "objectives "
+      "tagline ";
+  }
+
+  #about-hero {
+    width: 100%;
+  }
+
+  #about-hero p {
+    width: 100%;
+  }
+
+  .container-msg {
+    grid-area: vision;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 60px 0px 80px;
+    gap: 30px;
+    margin: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #cu {
+    text-align: center;
+  }
+
+  #cu-main p {
+    text-align: center;
+    width: 100%;
+  }
+
+  form {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  #t-area {
+    width: 300px;
+  }
+
+  .submission-form {
+    width: 70%;
+    padding: 10px;
+    margin: 50px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #cu {
+    text-align: center;
+  }
+
+  #cu-main p {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+
+  .contact-form {
+    margin: 0;
+  }
+
+  form {
+    width: 100%;
+    margin: auto;
+  }
+
+  .social-icons {
+    display: block;
+  }
+
+  #t-area {
+    width: 280px;
+  }
+
+  .submission-form {
+    width: 80%;
+    padding: 10px;
+    margin: 50px auto;
   }
 }
